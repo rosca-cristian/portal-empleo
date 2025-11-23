@@ -1,0 +1,197 @@
+/* CVs Page - Enhanced Neobrutalism Design */
+
+.cvs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.cvs-content {
+  width: 100%;
+}
+
+.cvs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-warning) 100%);
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.cvs-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+.cvs-header::after {
+  content: '📄';
+  position: absolute;
+  font-size: 150px;
+  opacity: 0.08;
+  right: 30px;
+  bottom: -30px;
+  transform: rotate(-15deg);
+}
+
+.cvs-title {
+  font-size: var(--font-size-5xl);
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-upload-new {
+  padding: 14px 40px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: var(--border-width) solid var(--border-color);
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-upload-new:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-primary-dark);
+}
+
+.btn-upload-new:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.cvs-loading {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.success-message-cv {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-success);
+  color: var(--color-black);
+  border: var(--border-width) solid var(--border-color);
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.upload-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.cvs-empty-state {
+  text-align: center;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  border: 6px dashed var(--border-color);
+  background: var(--bg-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.cvs-empty-state::before {
+  content: '📁';
+  position: absolute;
+  font-size: 250px;
+  opacity: 0.05;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+.cvs-empty-state p {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-gray-600);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-upload-large {
+  padding: 18px 60px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: var(--border-width) solid var(--border-color);
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-upload-large:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: var(--shadow-xl);
+  background: var(--color-primary-dark);
+}
+
+.btn-upload-large:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.cvs-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cvs-header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+    padding: var(--spacing-lg);
+  }
+
+  .cvs-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .btn-upload-new {
+    width: 100%;
+  }
+}

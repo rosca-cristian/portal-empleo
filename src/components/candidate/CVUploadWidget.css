@@ -1,0 +1,140 @@
+/* CV Upload Widget - Neobrutalism Design */
+
+.cv-upload-widget {
+  width: 100%;
+}
+
+.upload-zone {
+  border: 3px dashed #000;
+  background: #fff;
+  padding: 48px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-zone:hover:not(.uploading):not(.success):not(.error) {
+  background: #f5f5f5;
+}
+
+.upload-zone.dragging {
+  border-style: solid;
+  border-color: #0066FF;
+  background: #E6F2FF;
+}
+
+.upload-zone.success {
+  border-color: #10B981;
+  border-style: solid;
+  background: #ECFDF5;
+}
+
+.upload-zone.error {
+  border-color: #FF6B9D;
+  border-style: solid;
+  background: #FFF1F5;
+}
+
+.upload-zone.uploading {
+  cursor: not-allowed;
+}
+
+.upload-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.upload-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.upload-format {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Progress */
+.upload-progress {
+  width: 100%;
+  max-width: 400px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 32px;
+  background: #E5E7EB;
+  border: 3px solid #000;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #0066FF;
+  transition: width 0.3s;
+}
+
+.progress-text {
+  margin-top: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Success */
+.upload-success {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.success-icon {
+  font-size: 64px;
+  color: #10B981;
+}
+
+.success-message {
+  font-size: 20px;
+  font-weight: 700;
+  color: #10B981;
+}
+
+.file-info {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Error */
+.upload-error {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.error-message {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FF6B9D;
+}
+
+.btn-retry {
+  padding: 12px 24px;
+  background: #fff;
+  color: #000;
+  border: 3px solid #000;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.btn-retry:hover {
+  background: #f0f0f0;
+}

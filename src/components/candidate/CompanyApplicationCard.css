@@ -1,0 +1,278 @@
+/* CompanyApplicationCard - Neobrutalism Design */
+.company-application-card {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  padding: 1.5rem;
+  box-shadow: 6px 6px 0 #000000;
+  transition: all 0.2s ease;
+}
+
+.company-application-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 #000000;
+}
+
+/* Header Section */
+.company-app-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.candidate-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.candidate-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.application-date {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666666;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  font-size: 12px;
+  font-weight: 700;
+  border: 2px solid #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge-pending {
+  background-color: #ffd60a;
+  color: #000000;
+}
+
+.status-badge-accepted {
+  background-color: #06ffa5;
+  color: #000000;
+}
+
+.status-badge-rejected {
+  background-color: #ff006e;
+  color: #ffffff;
+}
+
+.status-badge-reviewed {
+  background-color: #8338ec;
+  color: #ffffff;
+}
+
+.status-badge-default {
+  background-color: #cccccc;
+  color: #000000;
+}
+
+/* Body Section */
+.company-app-card-body {
+  margin-bottom: 1.5rem;
+}
+
+.candidate-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+/* Cover Letter Section */
+.cover-letter-section {
+  margin-top: 1rem;
+}
+
+.btn-toggle-cover-letter {
+  background-color: #f1faee;
+  border: 2px solid #000000;
+  padding: 0.5rem 1rem;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #000000;
+  transition: all 0.1s ease;
+  margin-bottom: 0.75rem;
+}
+
+.btn-toggle-cover-letter:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.btn-toggle-cover-letter:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #000000;
+}
+
+.cover-letter-content {
+  background-color: #f8f9fa;
+  border: 2px solid #000000;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.cover-letter-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* Actions Section */
+.company-app-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 3px solid #000000;
+}
+
+.company-app-card-actions button {
+  padding: 0.75rem 1.25rem;
+  font-size: 14px;
+  font-weight: 700;
+  border: 3px solid #000000;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #000000;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.company-app-card-actions button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.company-app-card-actions button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 #000000;
+}
+
+/* Primary Action - View CV */
+.btn-view-cv {
+  background-color: #3a86ff;
+  color: #ffffff;
+  flex: 1;
+  min-width: 120px;
+}
+
+.btn-primary-action {
+  font-size: 16px;
+  padding: 0.85rem 1.5rem;
+}
+
+/* View Profile */
+.btn-view-profile {
+  background-color: #ffffff;
+  color: #000000;
+  flex: 1;
+  min-width: 120px;
+}
+
+/* Accept Button */
+.btn-accept {
+  background-color: #06ffa5;
+  color: #000000;
+  flex: 1;
+  min-width: 100px;
+}
+
+/* Reject Button */
+.btn-reject {
+  background-color: #ff006e;
+  color: #ffffff;
+  flex: 1;
+  min-width: 100px;
+}
+
+/* Disabled Button */
+.btn-disabled {
+  background-color: #cccccc !important;
+  color: #666666 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6;
+}
+
+.btn-disabled:hover {
+  transform: none !important;
+  box-shadow: 3px 3px 0 #000000 !important;
+}
+
+.btn-disabled:active {
+  transform: none !important;
+  box-shadow: 3px 3px 0 #000000 !important;
+}
+
+/* Position Filled Notice */
+.position-filled-notice {
+  width: 100%;
+  background-color: #FFD60A;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 0.75rem 1rem;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 2px 2px 0 #000000;
+  margin-bottom: 0.5rem;
+}
+
+.mvp-limitation-tooltip {
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 0.25rem;
+  color: #333333;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .company-application-card {
+    padding: 1rem;
+  }
+
+  .company-app-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .candidate-name {
+    font-size: 16px;
+  }
+
+  .company-app-card-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .company-app-card-actions button {
+    width: 100%;
+    flex: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .candidate-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .application-date {
+    font-size: 12px;
+  }
+}

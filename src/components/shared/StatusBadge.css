@@ -1,0 +1,35 @@
+/* Status Badge - Neobrutalism Design */
+
+.status-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  border: 3px solid #000;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* PENDING: Yellow background, black text */
+.status-badge-pending {
+  background: #FFDD00;
+  color: #000;
+}
+
+/* ACCEPTED: Green background, white text */
+.status-badge-accepted {
+  background: #10B981;
+  color: #fff;
+}
+
+/* REJECTED: Pink background, white text */
+.status-badge-rejected {
+  background: #FF6B9D;
+  color: #fff;
+}
+
+/* Default fallback */
+.status-badge-default {
+  background: #f0f0f0;
+  color: #000;
+}

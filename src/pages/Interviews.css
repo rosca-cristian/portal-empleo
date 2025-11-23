@@ -1,0 +1,422 @@
+/* Interviews - Enhanced Neobrutalism Design */
+
+.interviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.interviews-content {
+  width: 100%;
+}
+
+.interviews-loading {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.interviews-error {
+  text-align: center;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  background: var(--bg-card);
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.interviews-error h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.interviews-error p {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 600;
+}
+
+.btn-back-to-dashboard {
+  padding: 14px 40px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: var(--border-width) solid var(--border-color);
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-back-to-dashboard:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-primary-dark);
+}
+
+.btn-back-to-dashboard:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Header */
+.interviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, var(--color-info) 0%, var(--color-success) 100%);
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.interviews-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+.interviews-header::after {
+  content: '🎤';
+  position: absolute;
+  font-size: 150px;
+  opacity: 0.08;
+  right: 30px;
+  bottom: -30px;
+  transform: rotate(-15deg);
+}
+
+.interviews-title {
+  font-size: var(--font-size-5xl);
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-back-to-jobs {
+  padding: 14px 32px;
+  background: var(--color-white);
+  color: var(--color-black);
+  border: var(--border-width) solid var(--border-color);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-back-to-jobs:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-gray-100);
+}
+
+.btn-back-to-jobs:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Empty State */
+.interviews-empty {
+  text-align: center;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  background: var(--bg-card);
+  border: 6px dashed var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.interviews-empty::before {
+  content: '📅';
+  position: absolute;
+  font-size: 250px;
+  opacity: 0.05;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+.interviews-empty h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.interviews-empty p {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-go-to-jobs {
+  padding: 18px 60px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: var(--border-width) solid var(--border-color);
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.btn-go-to-jobs:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: var(--shadow-xl);
+  background: var(--color-primary-dark);
+}
+
+.btn-go-to-jobs:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Section */
+.interviews-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 50%;
+  height: 6px;
+  background: var(--color-accent);
+  border: 2px solid var(--border-color);
+}
+
+.interviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Interview Card */
+.interview-card {
+  background: var(--bg-card);
+  border: var(--border-width) solid var(--border-color);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.interview-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: var(--color-success);
+  transition: width var(--transition-base);
+}
+
+.interview-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.interview-card:hover::before {
+  width: 16px;
+}
+
+.interview-card.past {
+  opacity: 0.7;
+  background: var(--color-gray-100);
+}
+
+.interview-card.past::before {
+  background: var(--color-gray-500);
+}
+
+.interview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 3px solid var(--border-color);
+}
+
+.candidate-name {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-black);
+  letter-spacing: -0.5px;
+}
+
+.status-badge {
+  padding: 8px 20px;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  border: 3px solid var(--border-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow-sm);
+}
+
+.status-badge.upcoming {
+  background: var(--color-success);
+  color: var(--color-black);
+}
+
+.status-badge.past {
+  background: var(--color-gray-500);
+  color: var(--color-white);
+}
+
+/* Interview Details */
+.interview-details {
+  margin-bottom: var(--spacing-lg);
+}
+
+.detail-row {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+
+.detail-label {
+  font-weight: 700;
+  color: var(--color-black);
+  min-width: 120px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: var(--font-size-xs);
+}
+
+.detail-value {
+  color: var(--color-gray-700);
+  font-weight: 600;
+}
+
+/* Interview Actions */
+.interview-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.btn-view-candidate,
+.btn-view-job {
+  padding: 12px 24px;
+  border: var(--border-width) solid var(--border-color);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-view-candidate {
+  background: var(--color-info);
+  color: var(--color-black);
+}
+
+.btn-view-job {
+  background: var(--color-accent);
+  color: var(--color-black);
+}
+
+.btn-view-candidate:hover,
+.btn-view-job:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-view-candidate:active,
+.btn-view-job:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .interviews-header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+    padding: var(--spacing-lg);
+  }
+
+  .interviews-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .btn-back-to-jobs {
+    width: 100%;
+  }
+
+  .interview-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .interview-actions {
+    width: 100%;
+  }
+
+  .interview-actions button {
+    flex: 1;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .detail-label {
+    min-width: auto;
+  }
+}
