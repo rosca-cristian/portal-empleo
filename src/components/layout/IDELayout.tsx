@@ -3,7 +3,7 @@ import ActivityBar from './ActivityBar';
 import Sidebar from './Sidebar';
 import StatusBar from './StatusBar';
 import EditorTab from './EditorTab';
-import { FileCode, Layout } from 'lucide-react';
+import { FileCode } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
 interface IDELayoutProps {
@@ -12,7 +12,7 @@ interface IDELayoutProps {
 
 const IDELayout: React.FC<IDELayoutProps> = ({ children }) => {
     const location = useLocation();
-    const [sidebarVisible, setSidebarVisible] = useState(true);
+    const [sidebarVisible] = useState(true);
 
     // Determine current tab based on route
     const getTabInfo = () => {
